@@ -21,12 +21,33 @@
      <button id="btn-make-purple">make purple</button>
 
     <input type="text">
+    <br>
+
+    <!-- option:4 add event listener (highly recommended) -->
+
+    <button id="btn-make-orange">make orange</button>
+
+    <button id="btn-make-gold">make gold</button>
 
     <script>
  
         function makeBlue(){
             document.body.style.backgroundColor='blue'
         }
+
+
+
+        // document.getElementById().addEventListener("event type", handler)
+
+        document.getElementById('btn-make-orange').addEventListener('click', function makeOrange(){
+            document.body.style.backgroundColor='orange';
+        })
+
+        document.getElementById('btn-make-gold').addEventListener('click', function makeGold(){
+            document.body.style.backgroundColor='gold';
+        })
+
+
     </script>
 
     <script src="js/events.js"></script>
