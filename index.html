@@ -7,12 +7,24 @@
 </head>
 <body>
     <h1>dom domdom events</h1>
-
+  <!-- option 1 for onclick  -->
     <button onclick="console.log(7)">click me</button>
     <button onclick="console.log(63)">another button</button>
     <button onclick="console.log('i am clicked')">more button</button>
+    <br>
+    <!-- option 2 for onlick (recommended) -->
+     <button onclick="makeYellow()">make yellow</button>
+     <button onclick="makeRed()">make red</button>
+     <button onclick="makeBlue()">make blue</button>
 
     <input type="text">
+
+    <script>
+ 
+        function makeBlue(){
+            document.body.style.backgroundColor='blue'
+        }
+    </script>
 
     <script src="js/events.js"></script>
 </body>
