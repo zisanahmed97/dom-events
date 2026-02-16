@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>demo practice</title>
+    <style>
+        
+    </style>
+</head>
+<body>
+    <h1 id="bondu-title">hello bondu</h1>
+    <button id="bondu-btn">click</button>
+
+    <p id="text-zisan">hello zisan</p>
+    <button id="btn-zisan">click zisan</button>
+
+
+    <p id="no-user">no user</p>
+    <input id="input-text"  type="text" placeholder="write here..">
+    <button id="btn-login">login</button>
+
+   <section>
+     <div id="comment-container">
+        <p class="comment">Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsam quaerat magni distinctio similique perferendis aut voluptas. Cumque aut veritatis ex minus quae aperiam saepe laboriosam nihil! Libero, consequuntur. Maiores, placeat.</p>
+        <p class="comment">Eveniet laudantium facere laborum blanditiis. Ad iusto maiores commodi sapiente accusantium tempore reprehenderit quibusdam porro quo eaque rerum consequuntur incidunt, aperiam aliquam quas laboriosam sint id perferendis vero adipisci accusamus.</p>
+        <p class="comment">Sint eaque nihil officiis, qui voluptas harum error optio ipsa dolores, quae temporibus maxime illum laboriosam assumenda exercitationem id doloribus quo, voluptatibus minus magni nisi quis facilis? Voluptates, iusto corrupti?</p>
+    </div>
+    <textarea name="" id="comment-text-area" cols="50" rows="5"></textarea>
+    <br>
+    <button id="btn-comment">comment</button>
+    <br>
+    <br><br>
+   
+</section>
+
+<section>
+    <div>
+       <ul id="order-list">
+        <li>mango</li>
+        <li>meat</li>
+        <li>nuts</li>
+        <li>burger</li>
+       </ul>
+    </div>
+    
+    <textarea name="" id="order-text" cols="30" rows="5" placeholder="write here tour order list"></textarea> <br>
+   <button id="btn-order">order</button>
+</section>
+
+
+
+
+    <script>
+  document.getElementById('bondu-btn') .addEventListener('click',function(){
+     const friend = document.getElementById('bondu-title');
+     friend.style.color='red';
+     friend.style.fontSize='5em';
+  })
+
+  document.getElementById('btn-zisan').addEventListener('click', function(){
+    const textZisan = document.getElementById('text-zisan');
+    textZisan.innerText='kemon aso?';
+    textZisan.style.fontSize= '5em';
+    textZisan.style.border='2px solid red';
+    textZisan.style.color='blue';
+    
+  })
+
+  document.getElementById('btn-login').addEventListener('click',function(){
+    const inputText =document.getElementById('input-text');
+    const valueInput = inputText.value;
+
+    const noUser = document.getElementById('no-user');
+   noUser.innerText=valueInput;
+   noUser.style.border='2px solid red';
+   noUser.style.textAlign='center';
+ })
+  
+
+ document.getElementById('btn-comment').addEventListener('click',function(){
+    const textareaComment = document.getElementById('comment-text-area');
+    const commentText = textareaComment.value;
+
+    const commentContainer = document.getElementById('comment-container');
+
+    const commentElement = document.createElement('p');
+   
+    commentElement.innerText=commentText;
+
+
+    
+    commentContainer.appendChild(commentElement);
+  textareaComment.value='';
+    
+ })
+
+
+
+document.getElementById('btn-order').addEventListener('click',function(){
+    const orderText = document.getElementById('order-text');
+    const order = orderText.value;
+
+    const orderList = document.getElementById('order-list');
+    const newOrder = document.createElement('li');
+    newOrder.innerText=order;
+
+    orderList.appendChild(newOrder);
+    orderText.value='';
+
+})
+
+
+
+    </script>
+</body>
+</html>
