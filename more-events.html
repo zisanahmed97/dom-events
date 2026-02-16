@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>more events</title>
+</head>
+<body>
+    <button id="btn-mouse">micky mouse minie</button>
+    <input id="user-name" type="text" placeholder="your name">
+    <script>
+        // document.getElementById('btn-mouse').addEventListener('mouseenter',function (){
+        //     console.log('event triggered') // button er upor just cursor nilei hobe
+        // })
+
+
+        // document.getElementById('btn-mouse').addEventListener('mousemove',function (){
+        //     console.log('event moved') //button er vitore niye mouse norchor korlei action nibe
+
+        // })
+
+        //    document.getElementById('btn-mouse').addEventListener('mouseout',function (){
+        //     console.log('event out') //mouse out holei action hobe
+        // })
+
+           document.getElementById('user-name').addEventListener('focus',function (){
+            console.log('user about to write') 
+        })
+
+                   document.getElementById('user-name').addEventListener('blur',function (){
+            console.log('user done write') 
+        })
+        
+        //            document.getElementById('user-name').addEventListener('keydown',function (event){
+        //     console.log('typing',event.target.value) ;
+        // })
+                     document.getElementById('user-name').addEventListener('keyup',function (event){
+            console.log('typing',event.target.value) ;
+        })
+
+    </script>
+</body>
+</html>
